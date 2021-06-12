@@ -139,6 +139,7 @@ li {
     cursor: pointer;
 }
 
+
 .primary-button {
     background-color: #40AAE5;
     color: #f4f4f4;
@@ -192,7 +193,7 @@ li {
     justify-content: center;
     position: static;
     top: 50%;
-    left: 50%
+    left: 50%;
 }
 
 .featured {
@@ -450,7 +451,19 @@ label {
     color: #192E10;
 }
 
-@media screen and (max-width: 600px) {
+.individual-project {
+    background: #FCF7F2;
+    padding-left: 100px;
+    padding-bottom: 48px;
+    padding-top: 20px;
+    margin-top: 200px;
+    border-top-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+}
+
+@media screen and (max-width: 768px) {
     .contact-container {
         display: grid;
         grid-template-columns: 1fr;
@@ -482,6 +495,7 @@ label {
         padding-right: 40px;
     }
 }
+/* ------Home Screen Mobile Media------ */
 
 @media (max-width:768px) {
     .nav {
@@ -504,8 +518,9 @@ li {
 }
 
 .intro {
-    padding-bottom: 64px;
+    padding-bottom: 0px;
     margin: 0;
+    margin-bottom: 64px;
 }
 
 .moreinfo {
@@ -521,7 +536,7 @@ li {
     row-gap: 2em;
     position: sticky;
     top: 120px;
-    align-items: center;
+    align-items: left;
 }
 
 .grid_item_1 {
@@ -530,15 +545,17 @@ li {
 }
 
 .grid_item_2 {
-    width: 100%;
+    width: 10%;
     height: 200px;
+    margin-bottom: 64px;
     justify-content: flex-start;
+    z-index: -1;
 }
 
 .mylogo {
     position: relative;
     left: 0;
-    transform: scale(.40);
+    transform: scale(.45);
 }
 
 .featured {
