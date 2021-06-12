@@ -58,7 +58,7 @@
         </div>
         <div class="grid_item_2">
 
-            <div class="mylogo"> <img src="images/portfolio logo.png" alt="mylogo" width="300em">
+            <div class="mylogo"> <img src="images/portfolio_logo.png" alt="mylogo" width="300em">
             </div>
         </div>
     </div>
