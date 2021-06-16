@@ -144,9 +144,9 @@ p {
     font-size: 18px;
     color: #192E10;
 }
-/* ---------------------------------Buttons---------------------------------
------------------------------------Buttons---------------------------------
------------------------------------Buttons--------------------------------- */
+/* ------------------------------Buttons---------------------------------
+------------------------------------Buttons---------------------------------
+----------------------------------------Buttons--------------------------------- */
 .primary-button {
     background-color: #40AAE5;
     color: #f4f4f4;
@@ -233,7 +233,6 @@ p {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
 }
-
 
 .item1 {
     max-width: 25em;
@@ -331,38 +330,6 @@ p {
     justify-content: center;
 }
 
-.image-container {
-    max-width: 350px;
-}
-
-.more-projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-bottom: 20px;
-    padding-top: 60px
-}
-
-.more-projects-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 100px;
-    margin-top: 40px;
-}
-
-.projects_page_grid {
-    display: grid;
-    margin-top: 56px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    row-gap: 96px;
-}
-
-.projects_grid_wrapper {
-    padding-top: 200px;
-    padding-bottom: 88px;
-}
-
 .footer {
     background-color: #091503;
     height: 160px;
@@ -392,6 +359,42 @@ p {
 .logo-grid-item {
     margin: 0px;
 }
+
+.more-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+    padding-top: 60px
+}
+.more-projects-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 100px;
+    margin-top: 40px;
+}
+
+/* ----------------------Projects----------------------
+-------------------------Projects----------------------
+-------------------------Projects---------------------- */
+
+.projects_page_grid {
+    display: grid;
+    margin-top: 56px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    row-gap: 80px;
+    justify-content: space-between;
+}
+
+.projects_grid_wrapper {
+    padding-top: 200px;
+    padding-bottom: 80px;
+}
+.projects_page_grid img{
+    max-height: 320px;
+}
+
 
 .contact {
     padding-top: 170px;
@@ -757,6 +760,11 @@ flex-direction: column;
 }
 
 /* --------------------------------------Media Queries------------------------------------- */
+/* --------------------------------------Media Queries------------------------------------- */
+/* --------------------------------------Media Queries------------------------------------- */
+
+
+/* -----------------------------------------Contact----------------------------------------- */
 
 @media screen and (max-width: 768px) {
     .contact-container {
@@ -787,29 +795,30 @@ flex-direction: column;
     }
     ul {
         font-size: 1em;
-        padding-right: 40px;
     }
+
+    .footer_grid{
+        padding-left: 48px;
+        padding-right: 48px;
 }
 
 /* ------Home Screen Mobile Media------ */
 
 @media screen and (max-width:768px) {
     .nav {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        display: flex;
+        flex-wrap: wrap;
         padding-bottom: 16px;
     }
     .nav ul {
-        text-align: center;
         justify-content: space-between;
+        padding: 0px 48px;
     }
-    li {
+    .nav li {
         display: inline;
         transition: linear .15s;
-        padding-left: 5%;
-        padding-right: 5%;
-        justify-content: space-evenly;
+       padding: 0px;
+
     }
     .intro {
         padding-bottom: 0px;
@@ -867,9 +876,8 @@ flex-direction: column;
         grid-template-rows: 1fr;
         grid-template-columns: repeat(3, 1fr);
         gap: .5em;
-        padding-left: 100px;
         align-items: center;
-        justify-items: space-between;
+        justify-items: space-evenly;
     }
     .footer {
         padding-top: 16px;
@@ -893,4 +901,22 @@ flex-direction: column;
 .footer-name-grid{
     display: flex;
 }
+
+/* -----------------------------------------Projects----------------------------------------- */
+/* -----------------------------------------Projects----------------------------------------- */
+/* -----------------------------------------Projects----------------------------------------- *//* -----------------------------------------Projects----------------------------------------- */
+@media screen and (max-width: 1000px){
+    .projects_page_grid {
+        display: grid;
+        margin-top: 56px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        row-gap: 56px;
 }
+    
+}
+
+
+
+
+}}
