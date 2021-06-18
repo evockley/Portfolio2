@@ -668,9 +668,6 @@ margin-bottom: 48px;
     margin-bottom: 64px;
 }
 
-
-
-
 .goal{
     display: flex;
     flex-direction: column;
@@ -827,7 +824,7 @@ flex-direction: column;
     .footer_grid{
         padding-left: 48px;
         padding-right: 48px;
-}
+}}
 
 /* ---------------------Home Screen Mobile Media------------------- */
 /* ---------------------Home Screen Mobile Media------------------- */
@@ -915,8 +912,7 @@ flex-direction: column;
 
 /* -----------------------------------------Projects----------------------------------------- */
 /* -----------------------------------------Projects----------------------------------------- */
-/* -----------------------------------------Projects----------------------------------------- *//* -----------------------------------------Projects----------------------------------------- */
-@media screen and (max-width: 1000px){
+/* -----------------------------------------Projects----------------------------------------- */
     .projects_page_grid {
         display: grid;
         margin-top: 56px;
@@ -946,9 +942,98 @@ flex-direction: column;
     
 }
     
+/* -----------------------------------------GoCreate----------------------------------------- */
+/* -----------------------------------------GoCreate----------------------------------------- */
+/* -----------------------------------------GoCreate----------------------------------------- */
+@media screen and (max-width: 768px) {
+    .individual-project {
+        background: #FCF7F2;
+        padding: 16px 48px 0 48px;
+    }
+
+    .imported-graphic{
+        display: flex;
+        justify-content: center;
+        margin:0 0 24px 0;
+    
+        }
+    .process-overview-graphic{display: none;
+        justify-content: center;
+        margin-top: 48px;
+        margin-bottom: 48px;  
+    }
+    .headshots-wrapper{
+        display: flex;
+        flex-direction: column;
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+    .user-interview-headshots{
+        display: flex;
+        max-width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .individual-headshot{
+        display: flex;
+        gap: 20px;
+    }
+
+    .headshot{
+        max-inline-size:20vw;
+    }
+
+    .GoCreate-Empathy-Map{
+        border: #192E10;
+        border-style: solid;
+        border-radius: 30px;
+        border-width: 1px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        padding: 16px;
+        width: 100%;
+        row-gap: 8px;
+        margin-bottom: 48px;
+    }
+
+.sketches-grid{    
+    display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "sketch-1" 
+        "sketch-2" 
+        "sketch-3";
+        column-gap: 20px;
+        row-gap: 16px;
+}
+.sketch-1 {
+    grid-area: sketch-1;
+    max-width: 350px;
+    align-self: center;
+}
+.sketch-2 {
+    grid-area: sketch-2;
+    max-width:350px;
+    align-self: center;
 }
 
+.sketch-3 {
+    grid-area: sketch-3;
+    max-width:350px;
+    align-self: center;
+}
 
-
+.testing-highlights{
+    display: flex;
+    flex-direction:column;
+    gap: 16px;
+    justify-content: space-between;
+}
 
 }}
