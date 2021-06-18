@@ -24,6 +24,7 @@ h2 {
     font-size: 1.7em;
     font-weight: 600;
     color: #192E10;
+    margin: 16px 0px
 }
 
 h3 {
@@ -38,6 +39,14 @@ h4 {
     font-size: 1.1em;
     color: #192E10;
 }
+.subhead {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #192E10;
+    margin: 10px 0px;
+    margin-bottom: 24px;
+}
 
 p {
     font-family: 'Nunito Sans';
@@ -46,33 +55,9 @@ p {
     color: #192E10;
 }
 
-.nav ul {
-    list-style-type: none;
-    position: bottom;
-    padding-right: 100px;
-    margin: 0;
-    font-family: 'Playfair display';
-    font-size: 1.2em;
-    text-align: right;
-}
-
-.nav li {
-    display: inline;
-    padding-left: 44px;
-    padding-right: 44px;
-    transition: linear .15s;
-}
-
-.logo-wrapper {
-    margin-left: 100px;
-    align-items: left;
-    justify-content: center;
-    cursor: pointer;
-}
 /* ---------------------------Nav Bar---------------------------
 ------------------------------Nav Bar---------------------------
 ------------------------------Nav Bar--------------------------- */
-
 .nav {
     display: flex;
     justify-content: space-between;
@@ -90,8 +75,30 @@ p {
     align-items: center;
     z-index: 1;
 }
+.nav ul {
+    list-style-type: none;
+    position: bottom;
+    padding-right: 100px;
+    margin: 0;
+    font-family: 'Playfair display';
+    font-size: 1.2em;
+    text-align: right;
+}
 
 .nav li {
+    display: inline;
+    padding-left: 44px;
+    padding-right: 44px;
+    transition: linear .15s;
+    cursor: pointer;
+}
+
+.logo-wrapper {
+    display: block;
+    margin-left: 100px;
+    padding-bottom: 16px;
+    align-items: left;
+    justify-content: center;
     cursor: pointer;
 }
 
@@ -103,6 +110,11 @@ p {
 .nav a:hover {
     color: #D68D1F;
 }
+
+
+/* ---------------------------Home---------------------------
+------------------------------Home---------------------------
+------------------------------Home--------------------------- */
 
 .intro {
     font-family: 'Nunito Sans', sans-serif;
@@ -138,12 +150,7 @@ p {
     max-width: 50%;
 }
 
-.subhead {
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    color: #192E10;
-}
+
 /* ------------------------------Buttons---------------------------------
 ------------------------------------Buttons---------------------------------
 ----------------------------------------Buttons--------------------------------- */
@@ -227,50 +234,18 @@ p {
     padding-left: 100px;
     padding-right: 100px;
     padding-bottom: 48px;
-    padding-top: 20px;
+    padding-top: 16px;
     border-top-left-radius: 60px;
     border-bottom-right-radius: 60px;
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
 }
 
-.item1 {
-    max-width: 25em;
-    height: 632px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.item2 {
-    max-width: 25em;
-    height: 632px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.item3 {
-    max-width: 25em;
-    height: 632px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.item4 {
-    max-width: 25em;
-    height: 632px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.a {
+/* .section-heading {
     padding-top: 40px;
     padding-bottom: 40px;
     width: auto;
-}
+} */
 
 /* -----Featured Section------ */
 
@@ -374,9 +349,14 @@ p {
     margin-top: 40px;
 }
 
-/* ----------------------Projects----------------------
--------------------------Projects----------------------
--------------------------Projects---------------------- */
+/* --------------------------------------------------Projects--------------------------------------------------
+-----------------------------------------------------Projects--------------------------------------------------
+-----------------------------------------------------Projects--------------------------------------------------*/
+
+.projects_grid_wrapper {
+    padding-top: 200px;
+    padding-bottom: 80px;
+}
 
 .projects_page_grid {
     display: grid;
@@ -387,15 +367,24 @@ p {
     justify-content: space-between;
 }
 
-.projects_grid_wrapper {
-    padding-top: 200px;
-    padding-bottom: 80px;
-}
-.projects_page_grid img{
-    max-height: 320px;
+.item-image{
+max-width: 100%;
 }
 
+.item-image1{
+    max-width: 90%;
+}
 
+.project-grid-item {
+    max-width: 25em;
+    height: 632px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* --------------------------------------------------Contact--------------------------------------------------
+-----------------------------------------------------Contact--------------------------------------------------
+-----------------------------------------------------Contact--------------------------------------------------*/
 .contact {
     padding-top: 170px;
     background-color: #FCF7F2;
@@ -405,7 +394,6 @@ p {
 
 .contact-container {
     display: grid;
-    padding-bottom: 48px;
     margin-top: 40px;
     max-width: 100%;
     grid-gap: 32px;
@@ -762,8 +750,45 @@ flex-direction: column;
 /* --------------------------------------Media Queries------------------------------------- */
 /* --------------------------------------Media Queries------------------------------------- */
 /* --------------------------------------Media Queries------------------------------------- */
+@media screen and (max-width: 768px){
+    h1{
+        font-size: 22px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 16px;
+    }
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 16px;
+    }
+    .nav ul {
+        display: block;
+        padding: 0px 48px;
+        width: 100%;
+        text-align: center;
+    }
+    .nav li {
+        display: inline;
+        transition: linear .15s;
+        padding: 16px;
+    font-size: 16px;}
+
+       .logo-wrapper {
+        margin-left: 48px;
+        align-items: left;
+
+        cursor: pointer;
 
 
+
+    }
+
+/* -----------------------------------------Contact----------------------------------------- */
+/* -----------------------------------------Contact----------------------------------------- */
 /* -----------------------------------------Contact----------------------------------------- */
 
 @media screen and (max-width: 768px) {
@@ -774,9 +799,11 @@ flex-direction: column;
         grid-template-areas: "name" "email" "subject" "message" "button"
     }
     .contact {
-        padding-top: 35%;
+        padding-top: 25vh;
         padding-left: 24px;
-        padding-right: 24px;
+        padding-right:24px;
+        padding-bottom: 24px;
+
     }
     #message {
         padding-left: 1%;
@@ -802,24 +829,10 @@ flex-direction: column;
         padding-right: 48px;
 }
 
-/* ------Home Screen Mobile Media------ */
+/* ---------------------Home Screen Mobile Media------------------- */
+/* ---------------------Home Screen Mobile Media------------------- */
+/* ---------------------Home Screen Mobile Media------------------- */
 
-@media screen and (max-width:768px) {
-    .nav {
-        display: flex;
-        flex-wrap: wrap;
-        padding-bottom: 16px;
-    }
-    .nav ul {
-        justify-content: space-between;
-        padding: 0px 48px;
-    }
-    .nav li {
-        display: inline;
-        transition: linear .15s;
-       padding: 0px;
-
-    }
     .intro {
         padding-bottom: 0px;
         margin: 0;
@@ -858,8 +871,6 @@ flex-direction: column;
         grid-template-columns: 1fr;
         padding-left: 48px;
         padding-right: 48px;
-        padding-bottom: 48px;
-        padding-top: 4px;
         border-top-left-radius: 60px;
         border-bottom-right-radius: 60px;
     }
@@ -912,6 +923,27 @@ flex-direction: column;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         row-gap: 56px;
+        column-gap: 56px;
+}
+
+@media screen and (max-width: 768px) {
+    .projects_page_grid {
+        display: grid;
+        margin-top: 56px;
+        grid-template-columns: (1fr);
+        grid-template-rows: auto;
+        row-gap: 56px;
+        justify-content: space-evenly;
+    }
+    .project-grid-item {
+        max-width: 25em;
+        height: 532px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    
 }
     
 }
