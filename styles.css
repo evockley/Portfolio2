@@ -159,6 +159,10 @@ p {
     color: #f4f4f470;
 }
 
+.contact-primary-button{
+    display: none;
+}
+
 .secondary-button {
     background-color: #FAF2EB;
     color: #3891c9;
@@ -182,7 +186,9 @@ p {
 }
 
 .secondary-button:hover {
-    background-color: #c1b0a150;
+    background-color: #5eade330;
+    color: #16b4ed;
+    border-color: #16b4ed;
 }
 
 
@@ -247,17 +253,28 @@ p {
 .item-flex-container {
     display: flex;
     margin-bottom: 0;
-    column-gap: 10%;
+    column-gap: 4em;
     justify-content: space-between;
 }
 
-.home-item1 .home-item2 {
-    max-width: 25em;
-    min-width: 350;
+.home-item {
+    max-width: 28em;
+    min-width: 250;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-   
+}
+.more-projects {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 3vw;
+    padding-bottom: 24px;
+    padding-right: 24px;
+}
+
+.more-projects-container a{
+    text-decoration: none;
 }
 
 /* ----------------------Footer----------------------
@@ -276,7 +293,7 @@ p {
 .footer_grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10em;
+    grid-gap: 15em;
     padding-right: 100px;
     padding-left: 100px;
     align-items: center;
@@ -310,7 +327,7 @@ p {
 
 .logo-grid {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: flex-end;
 }
 
@@ -318,15 +335,7 @@ p {
     margin: 0px;
 }
 
-.more-projects {
-    display: flex;
-    justify-content: flex-end;
-    padding-bottom: 20px;
-}
 
-.more-projects-container a{
-    text-decoration: none;
-}
 
 /* --------------------------------------------------Projects--------------------------------------------------
 -----------------------------------------------------Projects--------------------------------------------------
@@ -388,36 +397,52 @@ p {
 }
 
 .contact-container {
-    display: grid;
-    max-width: 100%;
-    grid-gap: 32px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .30fr 1fr .70fr;
-    grid-template-areas: "name email subject" "message message message" "button button button"
+    margin-top: 24px;
+    max-width: 60vw;
+    margin:auto auto;
+}
+
+.contact-form{
+box-shadow: #98989830 0 0 20px;
+padding: 24px 24px;
+border-radius: 10px;
+border-style: solid;
+border-width: .5px;
+border-color: #192E1025;
+margin-bottom: 40px;
+
+}
+
+.contact-subgrid{
+    display: flex;
+justify-content: space-between;
 }
 
 #name {
-    grid-area: name;
     display: flex;
+    flex: 1 1 100px;
     flex-direction: column;
     max-height: 70px;
-    min-width: 120px;
+    min-width: 120px; 
+    max-width: 32%; 
 }
 
 #email {
     grid-area: email;
     display: flex;
+    flex: 1 1 100px;
     flex-direction: column;
-    max-height: 70px;
-    min-width: 120px;
+    max-height: 64px;
+    max-width: 32%;
 }
 
 #subject {
-    grid-area: subject;
+    grid-area: email;
     display: flex;
+    flex: 1 1 100px;
     flex-direction: column;
-    max-height: 70px;
-    min-width: 120px;
+    max-height: 64px;
+    max-width: 32%;
 }
 
 #message {
@@ -425,9 +450,8 @@ p {
     display: flex;
     flex-direction: column;
     align-self: center;
-    padding-left: 20%;
-    padding-right: 20%;
     min-width: 120px;
+    margin-top: 20px;
 }
 
 #button-container {
@@ -435,36 +459,70 @@ p {
     display: flex;
     justify-content: center;
     align-self: flex-start;
-    max-height: 70px;
+    max-height: 64px;
     min-width: 120px;
+    padding-top: 20px;
 }
 
 input {
+    box-sizing: border-box;
     width: 100%;
     min-height: 48px;
     border: transparent;
     border-radius: 8px;
     margin-top: 8px;
-    font-size: 1em;
     text-indent: 16px;
     outline: none;
+    border-color: #192E1060;
+    border-style: solid;
+    border-width: 1px;
+    opacity: 60%;
+    font-family: "brandon-grotesque";
+    font-size: 1em;
+    box-sizing: border-box;
+  transition:ease-in 150ms;
+}
+
+input:focus{box-sizing: border-box;
+    border-color: #F97171;
+    border-style: solid;
+    border-width: 1.5px;
+    opacity: 100%;
+    box-shadow: #98989835 0 0 10px;
+}
+
+#message-field{
+    box-sizing: border-box;
+    padding:16px;
+    resize: vertical;
+    border-color: #192E1060;
+    border-style: solid;
+    border-width: 1px;
+    opacity: 60%;
+    font-family: "brandon-grotesque";
+    font-size: 1em;
+    box-sizing: border-box;
+  transition:ease-in 150ms;
+}
+#message-field:focus{
+    border-color: #F97171;
+    border-style: solid;
+    border-width: 1.5px;
+    opacity: 100%;
+    box-shadow: #98989835 0 0 10px;
 }
 
 textarea {
     width: 100%;
-    height: 200px;
+    height: 150px;
     border: transparent;
     border-radius: 8px;
     margin-top: 8px;
-    font-size: 1em;
-    font-family: "Nunito Sans";
-    text-indent: 16px;
     outline: none;
-    resize: none;
 }
 
 label {
-    font-family: "Nunito Sans";
+    font-family: "neuzeit-grotesk";
     font-weight: 600;
     color: #192E10;
 }
